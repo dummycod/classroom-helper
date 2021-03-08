@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "222911846553",
+    "project_id": "classroom-helper-81277",
+    "storage_bucket": "classroom-helper-81277.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222911846553:android:33203575c4f9039c1e0008",
+        "android_client_info": {
+          "package_name": "com.ignitedminds.classroomhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222911846553-2vvbrp20pmj4i72l5nnmocbaq7gbk8pq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHiOmw9a_YXcRXWFZFBGxNWIT4A6qM9H0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222911846553-2vvbrp20pmj4i72l5nnmocbaq7gbk8pq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
