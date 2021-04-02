@@ -1,4 +1,4 @@
-package com.ignitedminds.classroomhelper
+package com.ignitedminds.classroomhelper.service
 
 import android.util.Log
 import com.google.firebase.iid.FirebaseInstanceId

@@ -18,7 +18,7 @@
         android:theme="@style/Theme.ClassroomHelper">
 
         <service
-            android:name=".NotificationService"
+            android:name=".service.NotificationService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
