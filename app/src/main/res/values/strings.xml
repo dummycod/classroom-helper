@@ -2,4 +2,18 @@
     <string name="app_name">Classroom Helper</string>
     <string name="nav_drawer_open">Open</string>
     <string name="nav_drawer_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="invalid_phone_number">Invalid Phone Number</string>
+    <string name="code_was_sent">Code was sent</string>
+    <string name="please_check_your_message_box">Please Check Your Message Box</string>
+    <string name="field_cannot_be_empty">This Field Cannot Be Empty</string>
+    <string name="age_minimum"> Minimum Age Must Be 5 years </string>
+    <string name="name_no_spaces">Name Cannot Contain Spaces</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="camera_needed">You need to grant access to camera to capture an image</string>
+    <string name="permission_required">Permission required</string>
+    <string name="camera_reason">We need this permission in order to capture an image</string>
+    <string name="accept">OK</string>
+    <string name="decline">Cancel</string>
 </resources>

@@ -1,202 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="25dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textview"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
-        android:gravity="center"
-        android:text="Enter the 6-digit code we sent to +919713506227"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.060000002" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview"
-        app:layout_constraintVertical_bias="0.07999998">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="42dp"
-            android:layout_height="55dp"
-            app:boxStrokeColor="@color/design_default_color_error"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            app:hintEnabled="false">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:fontFamily="@font/roboto_bold"
-                android:maxLength="1" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField0"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="42dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            app:boxStrokeColor="@android:color/holo_orange_dark"
-            app:hintEnabled="false">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:maxLength="1"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField4"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="42dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            app:boxStrokeColor="#FDD835"
-            app:hintEnabled="false">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:maxLength="1"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField3"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="42dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            app:boxStrokeColor="#7CB342"
-            app:hintEnabled="false">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:maxLength="1"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField2"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="42dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            app:boxStrokeColor="#3949AB"
-            app:hintEnabled="false">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:maxLength="1"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="42dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            app:boxStrokeColor="#8E24AA"
-            app:hintEnabled="false">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:maxLength="1"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_baseline_message_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:tint="#000000" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:backgroundTint="@color/black"
-        android:fontFamily="@font/roboto_bold"
-        android:padding="8dp"
-        android:text="Confirm"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.06999999" />
+        android:padding="25dp">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/design_default_color_error"
-        android:fontFamily="@font/roboto_bold"
-        android:padding="5dp"
-        android:text="Change Phone Number"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.100000024" />
+        <TextView
+            android:id="@+id/sentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Enter the 6-digit code we sent to"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.060000002" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/design_default_color_error"
-        android:fontFamily="@font/roboto_bold"
-        android:padding="5dp"
-        android:text="Resend Code"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.100000024" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sentTextView"
+            app:layout_constraintVertical_bias="0.07999998">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLength="1"
+                android:imeOptions="actionDone"
+                android:hint="x"
+                android:background="@drawable/otp_background"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:inputType="number"
+                android:background="@drawable/otp_background"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="x"
+                android:maxLength="1"
+                android:cursorVisible="false"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/otp_background"
+                android:inputType="number"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLength="1"
+                android:hint="x"
+                android:cursorVisible="false"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/otp_background"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLength="1"
+                android:hint="x"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/otp5"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/otp_background"
+                android:fontFamily="@font/roboto_bold"
+                android:inputType="number"
+                android:maxLength="1"
+                android:hint="x"
+                android:cursorVisible="false"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/otp6"
+                android:layout_width="42dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:background="@drawable/otp_background"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLength="1"
+                android:hint="x"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_message_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="#000000" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="8dp"
+            android:text="Confirm"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/change_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/design_default_color_error"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="Change Phone Number"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+        <Button
+            android:id="@+id/resend_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_error"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="Resend Code"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/change_number"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/circularProgressIndicator"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:indeterminate="true"
+            android:scrollbarSize="30dp"
+            android:visibility="invisible"
+            app:indicatorColor="@color/black"
+            app:indicatorSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/resend_code"
+            app:layout_constraintStart_toStartOf="@+id/resend_code"
+            app:layout_constraintTop_toBottomOf="@+id/resend_code"
+            app:trackThickness="4dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
