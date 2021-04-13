@@ -18,6 +18,7 @@ class SharedPrefsManager {
         private const val BIRTHDATE = "BIRTHDATE"
         private const val PROFILE_PHOTO_PATH = "PATH"
         private const val USERID ="USERID"
+        private const val REGISTRATION_TOKEN = "REGISTRATION_TOKEN"
 
         private fun getSharedPreferences(context: Context): SharedPreferences {
             return context.getSharedPreferences(LOGIN_DETAILS, Context.MODE_PRIVATE)
@@ -45,14 +46,15 @@ class SharedPrefsManager {
             editor.apply()
         }
 
-        fun getFirstName(context: Context): String? = getString(FIRST_NAME, context)
-        fun getMiddleName(context: Context): String? = getString(MIDDLE_NAME, context)
-        fun getLastName(context: Context): String? = getString(LAST_NAME, context)
-        fun getPhoneNumber(context: Context): String? = getString(PHONE_NUMBER, context)
-        fun getInstitute(context: Context): String? = getString(INSTITUTE, context)
-        fun getBirthDate(context: Context): String? = getString(BIRTHDATE, context)
-        fun getProfilePhotoPath(context: Context): String? = getString(PROFILE_PHOTO_PATH, context)
-        fun getUserId(context: Context ): String? = getString(USERID,context)
+        fun getFirstName(context: Context) = getString(FIRST_NAME, context)
+        fun getMiddleName(context: Context) = getString(MIDDLE_NAME, context)
+        fun getLastName(context: Context) = getString(LAST_NAME, context)
+        fun getPhoneNumber(context: Context) = getString(PHONE_NUMBER, context)
+        fun getInstitute(context: Context) = getString(INSTITUTE, context)
+        fun getBirthDate(context: Context) = getString(BIRTHDATE, context)
+        fun getProfilePhotoPath(context: Context) = getString(PROFILE_PHOTO_PATH, context)
+        fun getUserId(context: Context ) = getString(USERID,context)
+        fun getRegistrationToken(context:Context) = getString(REGISTRATION_TOKEN,context)
 
         fun setFirstName(context: Context, firstName: String) =
             setString(FIRST_NAME, context, firstName)
@@ -77,6 +79,9 @@ class SharedPrefsManager {
 
         fun setUserId(context: Context,userid : String)=
             setString(USERID,context,userid)
+
+        fun setRegistrationToken(context: Context,token:String) =
+            setString(REGISTRATION_TOKEN,context,token)
 
         fun saveStringData(context:Context,user : UserModel){
             setUserId(context,user._id)

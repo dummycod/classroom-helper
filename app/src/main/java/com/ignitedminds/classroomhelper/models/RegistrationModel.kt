@@ -9,6 +9,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.ignitedminds.classroomhelper.App
 import com.ignitedminds.classroomhelper.R
+import com.ignitedminds.classroomhelper.Utils.SharedPrefsManager
 import com.ignitedminds.classroomhelper.Utils.Utils
 import com.ignitedminds.classroomhelper.interfaces.UI.RegisterInterface
 import com.ignitedminds.classroomhelper.interfaces.model.RegistrationInterfaceModel
@@ -26,6 +27,8 @@ class RegistrationModel(override val registrationFragment: RegisterInterface) :
     private lateinit var instituteName: String
     private lateinit var birthDate: String
     private lateinit var phoneNumber: String
+    private  lateinit var registrationToken : String
+
     private var imageBitmap : Bitmap? = null
 
     private var TAG ="FirstRequest"
@@ -56,7 +59,7 @@ class RegistrationModel(override val registrationFragment: RegisterInterface) :
                     registrationFragment.onSuccess(userModel)
                 }
             },
-            Response.ErrorListener {
+            {
                 registrationFragment.showDialog("Error", "Error Occurred Please Try Again")
                 registrationFragment.hideProgressBar()
                 Log.d(TAG, "createStringRequest: Fail "+it?.networkResponse)
@@ -81,6 +84,7 @@ class RegistrationModel(override val registrationFragment: RegisterInterface) :
         jsonBody.put("birthDate", birthDate)
         jsonBody.put("instituteName", instituteName)
         jsonBody.put("phoneNo", phoneNumber)
+        jsonBody.put("registrationToken",registrationToken)
 
         val imageString = imageToString()
         if(imageString!=null){
@@ -100,6 +104,9 @@ class RegistrationModel(override val registrationFragment: RegisterInterface) :
             birthDate = getBirthDate()
             imageBitmap = getPhotoBitmap()
             phoneNumber = getPhoneNumber()
+            //Considering The Registration Token Would Not Be Null
+            registrationToken = SharedPrefsManager.getRegistrationToken(App.context)!!
+
         }
 
         val age = registrationFragment.getAge()

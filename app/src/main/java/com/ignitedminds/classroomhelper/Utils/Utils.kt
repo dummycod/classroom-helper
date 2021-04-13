@@ -162,7 +162,6 @@ class Utils private constructor(context: Context) {
                 json?.getString("imageBase64")?:""
             )
         }
-
     }
 
     private val requestQueue : RequestQueue by lazy{

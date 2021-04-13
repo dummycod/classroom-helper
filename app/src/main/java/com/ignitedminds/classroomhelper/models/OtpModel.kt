@@ -7,7 +7,9 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
+import com.google.firebase.messaging.FirebaseMessaging
 import com.ignitedminds.classroomhelper.App
+import com.ignitedminds.classroomhelper.Utils.SharedPrefsManager
 import com.ignitedminds.classroomhelper.Utils.Utils
 import com.ignitedminds.classroomhelper.interfaces.UI.OtpFragmentInterface
 import com.ignitedminds.classroomhelper.interfaces.model.OtpModelInterface
@@ -60,7 +62,21 @@ class OtpModel(override val otpFragmentInterface: OtpFragmentInterface) :
 
         auth.signInWithCredential(credential).addOnCompleteListener(activity){task ->
             if(task.isSuccessful){
-                Utils.getInstance(App.context.applicationContext).addToRequestQueue(createJsonObjectRequest())
+                FirebaseMessaging.getInstance().deleteToken().addOnCompleteListener {
+                    if(it.isSuccessful){
+                        FirebaseMessaging.getInstance().token.addOnCompleteListener {
+                            if(it.isSuccessful){
+                                SharedPrefsManager.setRegistrationToken(App.context,it.result!!)
+                                Log.d("TOKEN", "confirm: ${it.result}")
+                                Utils.getInstance(App.context).addToRequestQueue(createJsonObjectRequest())
+                            }else{
+                                otpFragmentInterface.showDialog("Try Again","Some Error Occurred Please Try Again")
+                            }
+                        }
+                    }else{
+                        otpFragmentInterface.showDialog("Try Again","Some Error Occurred Please Try Again")
+                    }
+                }
             }else{
                 if(task.exception is FirebaseAuthInvalidCredentialsException)
                     otpFragmentInterface.showDialog("Incorrect","Please Enter Correct Otp")
@@ -89,12 +105,14 @@ class OtpModel(override val otpFragmentInterface: OtpFragmentInterface) :
     private fun createJSONObject() : JSONObject{
         val jsonBody = JSONObject()
         val phoneNumber = otpFragmentInterface.getPhoneNumber()
+        val registrationToken = SharedPrefsManager.getRegistrationToken(App.context)
         jsonBody.put("phoneNo",phoneNumber)
+        jsonBody.put("registrationToken",registrationToken)
         return jsonBody
     }
 
     private fun createJsonObjectRequest() : JsonObjectRequest{
-        return JsonObjectRequest(POST,URL,createJSONObject(), Response.Listener {
+        return JsonObjectRequest(POST,URL,createJSONObject(), {
             if(it==null){
                 otpFragmentInterface.apply{
                     Log.d("OtpModel", "createJsonObjectRequest: HERE")
@@ -111,7 +129,7 @@ class OtpModel(override val otpFragmentInterface: OtpFragmentInterface) :
                     otpFragmentInterface.startRegistrationScreen()
                 }
             }
-        },Response.ErrorListener {
+        }, {
             otpFragmentInterface.apply {
                 Log.d("TAG", "createJsonObjectRequest: "+it.message)
                 showDialog("Error","Some Error Occurred Please Try Again..")

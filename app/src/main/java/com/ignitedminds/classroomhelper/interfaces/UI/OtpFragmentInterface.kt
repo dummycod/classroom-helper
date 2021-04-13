@@ -8,7 +8,7 @@ interface OtpFragmentInterface {
     fun disableResendButton()
     fun enableResendButton()
     fun startRegistrationScreen()
-    fun startLoginScreen(userModel: UserModel)
+    fun startProfileScreen(userModel: UserModel)
     fun getOtp() : String
     fun disableAllButtons()
     fun enableAllButtons()

@@ -6,6 +6,7 @@ import android.util.Log
 import android.os.*
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
+import com.google.firebase.messaging.FirebaseMessaging
 import com.ignitedminds.classroomhelper.App
 import com.ignitedminds.classroomhelper.Utils.Utils
 import com.ignitedminds.classroomhelper.interfaces.UI.LoginFragmentInterface

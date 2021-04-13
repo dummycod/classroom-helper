@@ -195,7 +195,7 @@ class OtpFragment : Fragment(),
         findNavController().navigate(action)
     }
 
-    override fun startLoginScreen(userModel: UserModel) {
+    override fun startProfileScreen(userModel: UserModel) {
         SharedPrefsManager.saveStringData(requireContext(),userModel)
         val action = OtpFragmentDirections.actionOtpFragmentToProfileFragment()
         if(userModel.imageBase64String.isNullOrBlank()){
